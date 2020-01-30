@@ -1,0 +1,30 @@
+{
+  "name": "ethernaut",
+  "version": "1.0.0",
+  "description": "etherenaut responses",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/matiasbn/ethernaut.git"
+  },
+  "keywords": [
+    "ethernaut",
+    "openzeppelin",
+    "javascript",
+    "ethereum",
+    "solidity",
+    "web3js"
+  ],
+  "author": "Matías Barrios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matiasbn/ethernaut/issues"
+  },
+  "homepage": "https://github.com/matiasbn/ethernaut#readme"
+}
