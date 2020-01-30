@@ -37,6 +37,7 @@ const ethernaut = async () => {
     debugEthernaut('txResult:\n', txResult);
     const owner = await contract.methods.owner().call();
     debugEthernaut('owner', owner);
+    debugEthernaut('address', account.address);
   } catch (error) {
     debugError(error);
   }
