@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/matiasbn/ethernaut/compare/v1.1.0...v1.2.0) (2020-01-30)
+
+
+### Features
+
+* contracts created ([b922b53](https://github.com/matiasbn/ethernaut/commit/b922b53dc624e8fee49c418cba508b25a05565fb))
+* deploy script ([a5e6fd9](https://github.com/matiasbn/ethernaut/commit/a5e6fd93a48a60aeb76e6b9cafa6dcc78e440074))
+* index modified ([d60615a](https://github.com/matiasbn/ethernaut/commit/d60615a3b8d5387b88d80cc321f3c655bfb03b07))
+
 ## 1.1.0 (2020-01-30)
 
 
