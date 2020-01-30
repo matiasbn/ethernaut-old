@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/matiasbn/ethernaut/compare/v1.2.0...v1.3.0) (2020-01-30)
+
+
+### Features
+
+* telephone finished ([59d5b3a](https://github.com/matiasbn/ethernaut/commit/59d5b3ab0d5789a1f10e91a31dae1fedb52978ff))
+
 ## [1.2.0](https://github.com/matiasbn/ethernaut/compare/v1.1.0...v1.2.0) (2020-01-30)
 
 
