@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "nodemon --watch src --exec babel-node src",
-    "debug": "DEBUG=ethernaut npm run start"
+    "debug": "DEBUG=ethernaut npm run start",
+    "deploy": "truffle deploy --network ropsten"
   },
   "repository": {
     "type": "git",
