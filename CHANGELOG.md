@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/matiasbn/ethernaut/compare/v1.7.0...v1.8.0) (2020-01-31)
+
+
+### Features
+
+* contracts created ([7eb45ad](https://github.com/matiasbn/ethernaut/commit/7eb45ade4132df5fdffc3f1aed731486bafc3e2f))
+* deployment script finished ([205ba39](https://github.com/matiasbn/ethernaut/commit/205ba3993992453a4f3686d98e1e300672582475))
+* reentrance finished ([8310068](https://github.com/matiasbn/ethernaut/commit/83100686ed634fcdcbeb666994efcb345485d5e2))
+* test finished ([407fce4](https://github.com/matiasbn/ethernaut/commit/407fce4357297c06841e039ffc5bba8803beaf0c))
+
+
+### Bug Fixes
+
+* test now gets current balance of owner ([b744310](https://github.com/matiasbn/ethernaut/commit/b744310bc27abadb3cdafcaabf33c1313d7deac9))
+
 ## [1.7.0](https://github.com/matiasbn/ethernaut/compare/v1.6.0...v1.7.0) (2020-01-31)
 
 
