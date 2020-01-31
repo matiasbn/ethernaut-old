@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/matiasbn/ethernaut/compare/v1.6.0...v1.7.0) (2020-01-31)
+
+
+### Features
+
+* badKing contract tested ([67e13fc](https://github.com/matiasbn/ethernaut/commit/67e13fc5ce93cd11830252cba735ab5ad6b23014))
+* king level finished ([811b16a](https://github.com/matiasbn/ethernaut/commit/811b16a42cdb9e06bca53d8d639161544dea2da8))
+* kings contracts added ([6a5b425](https://github.com/matiasbn/ethernaut/commit/6a5b4254ebc3cbc58ef42ebb3549bdd3230a2923))
+
 ## [1.6.0](https://github.com/matiasbn/ethernaut/compare/v1.5.0...v1.6.0) (2020-01-31)
 
 
