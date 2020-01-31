@@ -18,7 +18,7 @@ const contract = new web3.eth.Contract(artifact.abi, address);
 
 const ethernaut = async () => {
   try {
-    const ether = web3.utils.toWei(1);
+    const ether = web3.utils.toWei('1');
     debugEthernaut('1 ether to wei', ether);
     const estimatedGas = await solContract.methods.dethroneKing(ether).estimateGas();
     debugEthernaut('estimated gas', estimatedGas);
@@ -39,7 +39,7 @@ const ethernaut = async () => {
     debugEthernaut('txResult:\n', txResult);
 
     // Check result
-    const newKing = await contract.methods._king.call();
+    const newKing = await contract.methods._king();
     debugEthernaut('newKing', newKing);
   } catch (error) {
     debugError(error);
