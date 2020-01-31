@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/matiasbn/ethernaut/compare/v1.5.0...v1.6.0) (2020-01-31)
+
+
+### Features
+
+* vault finished ([5fb6c35](https://github.com/matiasbn/ethernaut/commit/5fb6c35378af1733b2604585d1cb09bb006c1298))
+
 ## [1.5.0](https://github.com/matiasbn/ethernaut/compare/v1.4.0...v1.5.0) (2020-01-31)
 
 
