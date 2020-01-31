@@ -1,8 +1,14 @@
-const ReentranceSol = artifacts.require('ReentranceSol');
+const ElevatorSol = artifacts.require('ElevatorSol');
+const Elevator = artifacts.require('Elevator');
 
-const address = '0x2F493EEa60Dcec0521157C08a9298fcA1C3DC350';
-const steal = web3.utils.toWei('0.5');
+const address = '0x1e3c175e2cbd4dA993c586a80DE7658C264c1859';
 
-module.exports = function (deployer) {
-  deployer.deploy(ReentranceSol, address, steal);
+module.exports = function (deployer, network) {
+  if (network === 'development') {
+    deployer.deploy(Elevator).then(function () {
+      return deployer.deploy(ElevatorSol, Elevator.address);
+    })
+  } else {
+    deployer.deploy(ElevatorSol, address);
+  }
 };
