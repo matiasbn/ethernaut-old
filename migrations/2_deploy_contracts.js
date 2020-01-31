@@ -1,7 +1,8 @@
-const BadKing = artifacts.require('BadKing');
+const ReentranceSol = artifacts.require('ReentranceSol');
 
-const address = '0x1fb863f8E39b3da64aA97e0aC40B0798d667868e';
+const address = '0x2F493EEa60Dcec0521157C08a9298fcA1C3DC350';
+const steal = web3.utils.toWei('0.5');
 
 module.exports = function (deployer) {
-  deployer.deploy(BadKing, address, { value: web3.utils.toWei('1', 'ether') });
+  deployer.deploy(ReentranceSol, address, steal);
 };
