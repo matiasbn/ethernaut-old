@@ -1,7 +1,7 @@
-const ForceSol = artifacts.require('ForceSol');
+const BadKing = artifacts.require('BadKing');
 
-const address = '0x9d84c8e81bb9a7569e554d87f3b140c92b6f20ec';
+const address = '0x1fb863f8E39b3da64aA97e0aC40B0798d667868e';
 
 module.exports = function (deployer) {
-  deployer.deploy(ForceSol, { value: web3.utils.toWei('0.0001', 'ether') });
+  deployer.deploy(BadKing, address, { value: web3.utils.toWei('1', 'ether') });
 };
