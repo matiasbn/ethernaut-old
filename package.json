@@ -9,7 +9,9 @@
   "scripts": {
     "start": "nodemon --watch src --exec babel-node src",
     "debug": "DEBUG=ethernaut npm run start",
-    "deploy": "truffle deploy --network ropsten"
+    "deploy": "truffle deploy --reset",
+    "deploy:ropsten": "truffle deploy --reset --network ropsten",
+    "compile": "truffle compile"
   },
   "repository": {
     "type": "git",
