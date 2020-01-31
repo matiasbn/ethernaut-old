@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/matiasbn/ethernaut/compare/v1.8.0...v1.9.0) (2020-01-31)
+
+
+### Features
+
+* contracts created ([4ef55b7](https://github.com/matiasbn/ethernaut/commit/4ef55b7a812e176f9977dc50c1efcc882e022fb7))
+* deploying to ropsten ([38aac7a](https://github.com/matiasbn/ethernaut/commit/38aac7a4dd7946f1f6e9d00e835238b2ba3fa9bc))
+* elevator solved ([d9b102e](https://github.com/matiasbn/ethernaut/commit/d9b102e557e49f762e4eedadbe25f1797613781f))
+* solhint added ([e353012](https://github.com/matiasbn/ethernaut/commit/e35301296fd0c88377a843ed0061b00fd09a4483))
+
 ## [1.8.0](https://github.com/matiasbn/ethernaut/compare/v1.7.0...v1.8.0) (2020-01-31)
 
 
