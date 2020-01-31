@@ -40,8 +40,10 @@ contract('Reentrance', (accounts) => {
     assert.equal(targetFinalBalance.toString(), '0', 'targetFinalBalance should be 0');
     assert.equal(solFinalBalance.toString(), totalBounty, 'donationResult should be the donation amount');
 
-    // Get contract balances from balancesOf
-    const solBalanceOf = await targetContract.balanceOf(solContract.address);
-    assert.equal(solBalanceOf.toString(), '0', 'solBalanceOf should be 0');
+    // Retrieve contract balance
+    const currentBalance = await web3.eth.getBalance(owner);
+    await solContract.getTheBounty();
+    const newBalance = await web3.eth.getBalance(owner);
+    assert.equal(currentBalance < newBalance, true, 'newBalance should be bigger than currentBalance');
   });
 });
