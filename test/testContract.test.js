@@ -17,7 +17,7 @@ contract('Elevator', (accounts) => {
 
   it('should get to the top floor YEEEEET', async () => {
     // Call the attack directly
-    
+
 
     // // Amount transferred initially to Reentrance contract
     // const reentranceInitialBalance = await web3.eth.getBalance(targetContract.address);
