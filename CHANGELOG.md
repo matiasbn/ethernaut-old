@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/matiasbn/ethernaut/compare/v1.9.0...v1.10.0) (2020-02-01)
+
+
+### Features
+
+* eslint truffle plugin ([4d8ad70](https://github.com/matiasbn/ethernaut/commit/4d8ad70c2efdb807130fc91368eb5528f5edfd6f))
+* privacy level finished ([98cc602](https://github.com/matiasbn/ethernaut/commit/98cc6022ba61ba066d46e1e72cd4953de455b616))
+
 ## [1.9.0](https://github.com/matiasbn/ethernaut/compare/v1.8.0...v1.9.0) (2020-01-31)
 
 
