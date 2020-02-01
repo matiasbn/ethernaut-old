@@ -11,7 +11,8 @@
     "debug": "DEBUG=ethernaut npm run start",
     "deploy": "truffle deploy --reset",
     "deploy:ropsten": "truffle deploy --reset --network ropsten",
-    "compile": "truffle compile"
+    "compile": "truffle compile",
+    "console:ropsten": "truffle console --network ropsten"
   },
   "repository": {
     "type": "git",
